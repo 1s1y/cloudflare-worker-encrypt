@@ -2,6 +2,8 @@
 
 https://github.com/bradyjoslin/encrypt-workers-kv
 
+用于实现 Zola 静态博客的文章密码保护功能
+
 ## cloudflare worker example
 
 [examples](https://developers.cloudflare.com/workers/examples/)
