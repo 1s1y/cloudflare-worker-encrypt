@@ -1,0 +1,18 @@
+name = "encrypt"
+type = "javascript"
+
+account_id = "" 
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-03-17"
+
+[build.upload]
+format = "modules"
+dir = "./src"
+main = "./index.js" # becomes "./src/worker.js"
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
+
