@@ -6,17 +6,17 @@ https://github.com/bradyjoslin/encrypt-workers-kv
 
 ## cloudflare worker example
 
-[examples](https://developers.cloudflare.com/workers/examples/)
+https://developers.cloudflare.com/workers/examples/
 
 ## 脚本配置
 
-[configurations](https://developers.cloudflare.com/workers/cli-wrangler/configuration/)
+https://developers.cloudflare.com/workers/cli-wrangler/configuration/
 
 有个疑惑的地方，文档说 account_id 是必须的，但我不配置运行 wrangler dev 和 publish 好像也没问题
 
 ## 使用 wrangler
 
-[commands](https://developers.cloudflare.com/workers/cli-wrangler/commands/)
+https://developers.cloudflare.com/workers/cli-wrangler/commands/
 
 ```bash
 wrangler generate

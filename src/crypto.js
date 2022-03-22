@@ -8,6 +8,10 @@ const SALT_LENGTH = 16;
 const encoder = new TextEncoder()
 const decoder = new TextDecoder()
 
+export function uuid() {
+  return crypto.randomUUID()
+}
+
 export async function decrypt(encrypted, password) {
     const buffer = decode(encrypted)
     const buff = new Uint8Array(buffer)

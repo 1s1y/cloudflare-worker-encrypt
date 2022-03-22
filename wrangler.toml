@@ -1,7 +1,12 @@
 name = "encrypt"
 type = "javascript"
 
-account_id = "" 
+kv_namespaces = [ 
+  { binding = "kv", id = "CLOUDFLARE_KV_ID", preview_id = "CLOUDFLARE_KV_ID" }
+]
+
+account_id = "CLOUDFLARE_ACCOUNT_ID" 
+
 workers_dev = true
 route = ""
 zone_id = ""
@@ -15,4 +20,3 @@ main = "./index.js" # becomes "./src/worker.js"
 [[build.upload.rules]]
 type = "ESModule"
 globs = ["**/*.js"]
-
