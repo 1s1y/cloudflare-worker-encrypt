@@ -11,6 +11,9 @@ https://github.com/bradyjoslin/encrypt-workers-kv
 ```bash
 curl -H 'x-app-password: password' -H 'content-type: text/plain' -X POST 'http://127.0.0.1:8787/encrypt' -d 'plain text'
 ```
+```bash
+curl -H 'x-app-kv: true' -H 'x-app-password: password' -H 'content-type: text/plain' -X POST 'http://127.0.0.1:8787/encrypt' -d 'plain text'
+```
 
 ### 解密
 
