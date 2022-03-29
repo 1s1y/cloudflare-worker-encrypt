@@ -23,6 +23,10 @@ curl -H 'content-type: application/json' -X POST 'http://127.0.0.1:8787/decrypt'
 
 ### 清空 KV
 
+[adding secrets via wrangler](https://developers.cloudflare.com/workers/platform/environment-variables/#adding-secrets-via-wrangler)
+
+`wrangler secret put TRUNCATE_SECRET`
+
 ```bash
 curl -H 'x-app-clean: true' -X POST 'http://127.0.0.1:8787/truncate'
 ```

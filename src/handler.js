@@ -28,7 +28,8 @@ export function cors(request, response) {
     return response1;
 }
 
-export async function encrypt(request, kv) {
+export async function encrypt(request, env) {
+    const kv = env.kv;
     const body = await request.text()
     const headers = request.headers
     const password = headers.get('x-app-password')
@@ -55,7 +56,8 @@ export async function encrypt(request, kv) {
     }
 }
 
-export async function decrypt(request, kv) {
+export async function decrypt(request, env) {
+    const kv = env.kv;
     const headers = request.headers
     const contentType = headers.get('content-type') || '';
     if (!contentType.includes('application/json')) {
@@ -81,8 +83,11 @@ export async function decrypt(request, kv) {
     }
 }
 
-export async function truncate(request, kv) {
-    if (!request.headers.get('x-app-clean')) {
+export async function truncate(request, env) {
+    const kv = env.kv;
+    const secret = env.TRUNCATE_SECRET;
+    const key = request.headers.get('x-app-clean');
+    if (key !== secret) {
         return new Response('', { status: 403 })
     }
 
