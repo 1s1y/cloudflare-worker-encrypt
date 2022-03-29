@@ -86,7 +86,7 @@ export async function decrypt(request, env) {
 export async function truncate(request, env) {
     const kv = env.kv;
     const secret = env.TRUNCATE_SECRET;
-    const key = request.headers.get('x-app-clean');
+    const key = request.headers.get('x-app-truncate');
     if (key !== secret) {
         return new Response('', { status: 403 })
     }
